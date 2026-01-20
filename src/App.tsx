@@ -31,6 +31,7 @@ function App() {
               options={{
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
+                projectId: "hcXz5Y-8PvCms-qW3IRx"
               }}
               resources={[
                 {
