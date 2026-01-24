@@ -37,15 +37,16 @@ export default function UploadWidget({
           clientAllowedFormats: ["png", "jpg", "jpeg", "gif", "webp"],
         },
         (error, result) => {
-          if (!error && result.event === "success") {
-            const payload: UploadWidgetValue = {
-              url: result.info.secure_url,
-              publicId: result.info.public_id,
-            };
-            // If there's an existing delete token, we might want to handle deletion here
-            setPreview(payload);
-            onChangeRef.current?.(payload);
+          if (!(!error && result.event === "success")) {
+            return;
           }
+          const payload: UploadWidgetValue = {
+            url: result.info.secure_url,
+            publicId: result.info.public_id,
+          };
+          // If there's an existing delete token, we might want to handle deletion here
+          setPreview(payload);
+          onChangeRef.current?.(payload);
         },
       );
 
