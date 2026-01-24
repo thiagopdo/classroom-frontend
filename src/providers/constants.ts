@@ -9,7 +9,7 @@ export const MOCK_SUBJECTS: Subject[] = [
     department: "Computer Science",
     description:
       "A foundational course covering sorting, searching, and graph algorithms, with an emphasis on time complexity and big-O notation.",
-    createdAt: new Date(),
+    createdAt: new Date().toISOString(),
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const MOCK_SUBJECTS: Subject[] = [
     department: "Psychology",
     description:
       "An exploration of mental processes such as attention, language use, memory, perception, problem-solving, creativity, and thinking.",
-    createdAt: new Date(),
+    createdAt: new Date().toISOString(),
   },
   {
     id: 3,
@@ -27,6 +27,6 @@ export const MOCK_SUBJECTS: Subject[] = [
     department: "Art History",
     description:
       "A survey of the major artistic movements in Italy and Northern Europe from the 14th to the 16th centuries, focusing on key figures like Da Vinci and Michelangelo.",
-    createdAt: new Date(),
+    createdAt: new Date().toISOString(),
   },
 ];
